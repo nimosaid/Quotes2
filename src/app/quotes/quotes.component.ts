@@ -9,25 +9,24 @@ import { Quotes } from '../quotes'
 })
 export class QuotesComponent implements OnInit {
 
-  quotes: Quotes[] = [
-    new Quotes('Keeper', 23, 'Great quote'),
-    new Quotes( 'Lover', 21 , 'What a quote!!'),
-    new Quotes('Roller' , 12, 'I can roll with this'),
-  ];
+  quotes = [
+    new Quote(1, 'The sun is a star.','A.B Clark',"Z.G"),
+    new Quote(2, 'The moon is beautiful.', 'B.C Smith',"E.I"),
+    new Quote(3, 'The earth is meh.', 'D.E Jacobsons',"T.O"),
+    new Quote(4, 'The galaxy is large.', 'F.G Randos',"P.S"),
+    new Quote(5, 'The universe is expanding.', 'I.J Persons',"Q.T"),
+];
 
-  toggleDetails(index) {
-    this.quotes[index].showComment = !this.quotes[index].showComment;
-  }
-  completeQuotes(isComplete, index){
-   if (isComplete) {
-     let toDelete = confirm(`Are sure you want to delete this ${this.quotes[index].name}`)
+addNewQuote(quote){
+ let quoteLength = this.quotes.length;
+ quote.id=quoteLength+1;
+ this.quotes.unshift(quote)
 
-     if(toDelete){
-       this.quotes.splice(index, 1)
 }
-   }
- }
 
+toogleDetails(index){
+ this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
+}
 
 
 

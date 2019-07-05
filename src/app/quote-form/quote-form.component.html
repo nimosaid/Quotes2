@@ -3,9 +3,9 @@
         <form (ngSubmit)='submitQuote()' #goalForm='ngForm'>
             <div class="form-group">
 
-                <label for="name">Quote</label>
-                <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
-                Display: {{newQuote.name}}
+                <label for="name">Quotes</label>
+                <input type="text" class="form-control" id="name" [(ngModel)]="newQuotes.name" name="name" #name="ngModel" required>
+                Display: {{newQuotes.name}}
 
 
             <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
@@ -16,7 +16,7 @@
             <div class="form-group">
 
                 <label for="author">Author</label>
-                <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="name" required>
+                <input type="text" required class="form-control" id="author" [(ngModel)]="newQuotes.author" name="name" required>
 
 
                 <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
@@ -27,7 +27,7 @@
             <div class="form-group">
 
                 <label for="submitted">Submitted by</label>
-                <input type="text" required class="form-control" id="submitted" [(ngModel)]="newQuote.submitted" name="name" required>
+                <input type="text" required class="form-control" id="submitted" [(ngModel)]="newQuotes.submitted" name="name" required>
 
 
                 <div [hidden]="name.valid || name.pristine" class="alert alert-danger">

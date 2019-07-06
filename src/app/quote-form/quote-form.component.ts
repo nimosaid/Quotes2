@@ -6,13 +6,13 @@ import { Quotes } from '..quotes'
   templateUrl: './quote-form.component.html',
   styleUrls: ['./quote-form.component.css']
 })
-export class QuoteFormComponent implements OnInit {
-  newQuotes=new Quotes(0,"","","");
-  @Output() addQuotes=new EventEmitter <Quotes>();
+export class quoteFormComponent implements OnInit {
+  newquotes=new quotes(0,"","","");
+  @Output() addQuotes=new EventEmitter <quotes>();
 
 
   submitQuotes(){
-    this.addQuotes.emit(this.newQuotes);
+    this.addquotes.emit(this.newquotes);
   }
 
 

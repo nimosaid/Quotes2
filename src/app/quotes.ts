@@ -1,6 +1,7 @@
 export class Quotes {
-  public showComment: boolean;
-  constructor(public name:number ,public vote:string ,public comment: string, public commment:string){
-    this.showComment=false;
+  public showAuthor: boolean;
+
+  constructor(public vote:number ,public quote:string ,public author: string){
+    this.showAuthor=false;
   }
 }

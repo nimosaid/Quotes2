@@ -1,7 +1,7 @@
 
 @import "~assets/css/bootstrap.css";
 body{
-  background-image: url("..assets/img/img1.jpg");
+  /* background-image: url("../assests/img/img1.jpg"); */
   background-position: center;
   background-size: cover;
 }

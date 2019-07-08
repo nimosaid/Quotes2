@@ -12,7 +12,13 @@ export class QuotesDetailComponent implements OnInit {
 
   votes: number;
 
-  @Input () quotes:Quotes;
+  @Input () quote:Quotes;
+  @Output() isComplete = new EventEmitter<boolean>();
+
+
+ quoteDelete(complete: boolean) {
+   this.isComplete.emit(complete);
+ }
   vote = 0;
 
   constructor() {

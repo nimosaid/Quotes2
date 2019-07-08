@@ -1,45 +1,43 @@
 <p>
-  {{quotes.comment}}
+    {{quote.author}}
 </p>
-<button class="btn-danger" (click)= 'quotesDelete(true)'>Delete</button>
+<button class="btn-danger" (click)='quotesDelete(true)'>Delete</button>
+<button class="btn-info" (click)='quote.vote = quote.vote + 1'>like {{Quotes.vote}}</button>
+<button class="btn-info" (click)='quote.vote = quote.vote - 1'>dislike {{Quotes.vote}}</button>
 
 <p>{{quote.author}} </p>
 
-<!--<button (click) = 'likeVote()'> Up Vote </button>
-<button (click) = 'dislikeVote()'> Down Vote </button>
-    </div> -->
+
 <p></p>
 
-    <div class="four wide column center aligned votes">
-      <div class="ui statistic">
+<div>
+    <div>
 
         <div class="value">
-          {{ votes }}
+            {{ votes }}
         </div>
         <div class="label">
-          Votes:
+            Votes:
         </div>
 
-      </div>
-
     </div>
 
-    <div class="twelve wide column">
+</div>
 
-      <ul class="ui big horizontal list voters">
+<div>
+
+    <ul>
         <li class="item">
-          <a href (click)="likeVote()">
-          <i class="arrow up icon"></i>
-            upvote
-          </a>
+            <a href (click)="likeVote()">
+                <i class="arrow up icon"></i> upvote
+            </a>
         </li>
 
         <li class="item">
-          <a href (click)="dislikeVote()">
-          <i class="arrow down icon"></i>
-            downvote
-          </a>
+            <a href (click)="dislikeVote()">
+                <i class="arrow down icon"></i> downvote
+            </a>
         </li>
 
-      </ul>
-    </div>
+    </ul>
+</div>

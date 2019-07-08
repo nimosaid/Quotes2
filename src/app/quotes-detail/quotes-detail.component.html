@@ -2,7 +2,8 @@
     {{quote.author}}
 </p>
 <button class="btn-danger" (click)='quotesDelete(true)'>Delete</button>
-<button class="btn-info" (click)='quote.vote = quote.vote + 1'>like {{Quotes.vote}}</button>
+<button class="btn-info" (click)='quote.vote = quote.vote - 1'>like {{Quotes.vote}}</button>
+
 <button class="btn-info" (click)='quote.vote = quote.vote - 1'>dislike {{Quotes.vote}}</button>
 
 <p>{{quote.author}} </p>

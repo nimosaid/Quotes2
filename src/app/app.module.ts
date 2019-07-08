@@ -8,14 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { QuotesDetailComponent } from './quotes-detail/quotes-detail.component';
-import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { QuoteFormComponents } from './quote-form/quote-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuotesComponent,
-    QuotesDetailComponent,
-    QuoteFormComponent
+    QuotesDetailComponent,  
+    QuoteFormComponents
   ],
   imports: [
     BrowserModule,

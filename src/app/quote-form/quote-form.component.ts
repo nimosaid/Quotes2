@@ -6,7 +6,7 @@ import { Quotes } from '../quotes'
   templateUrl: './quote-form.component.html',
   styleUrls: ['./quote-form.component.css']
 })
-export class QuoteFormComponent implements OnInit {
+export class QuoteFormComponents implements OnInit {
   newquotes=new Quotes(0,"", "", new Date());
 
   @Output() addQuotes=new EventEmitter <Quotes>();
